@@ -1,12 +1,18 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const tokenData = JSON.parse(localStorage.getItem("token")) || null;
-  const logout = tokenData !== null;
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const tokenData = JSON.parse(localStorage.getItem("token")) || null;
+    setIsLoggedIn(tokenData !== null);
+  }, [isLoggedIn]);
+
   const links = [
-      { path: "/", title: "Home" },
-      { path: "/signup", title: "Signup" },
-      { path: "/login", title: logout ? "Logout" : "Login" }
+    { path: "/", title: "Home" },
+    { path: "/signup", title: "Signup" },
+    { path: "/login", title: isLoggedIn ? "Logout" : "Login" }
   ];
 
   return (

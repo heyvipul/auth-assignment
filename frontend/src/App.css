@@ -41,7 +41,7 @@ body{
     cursor: pointer;
     font-weight: bold;
   }
-  h2{
+  h2,h3{
     text-decoration: underline;
     text-align: center;
   }
