@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-    const links = [
-        {path:"/", title: "Home"},
-        {path:"/signup", title: "Signup"},
-        {path:"/login", title: "Login"}
-      ]
+  const tokenData = JSON.parse(localStorage.getItem("token")) || null;
+  const logout = tokenData !== null;
+  const links = [
+      { path: "/", title: "Home" },
+      { path: "/signup", title: "Signup" },
+      { path: "/login", title: logout ? "Logout" : "Login" }
+  ];
 
   return (
     <div id='navbar'>
