@@ -2,6 +2,10 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import toast, { Toaster } from 'react-hot-toast';
 import "../App.css"
+import react from "../images/images.png"
+import apple from "../images/apple.jpg"
+import github from "../images/github.png"
+import playstore from "../images/playstore.png"
 
 const Home = () => {
   const [name,setName] = useState("")
@@ -49,10 +53,10 @@ const Home = () => {
         <p>I specialize in : <span>{stack}</span> as following shown, <br /> and this is my test submission</p>
       </div>
       <div className="second_div">
-        <img onClick={()=>setStack("React")} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbo3UbmjIGkOFLtTD4QDsSpfGq5z1PfbEYVA&usqp=CAU" alt="" />
-        <img onClick={()=>setStack("Github")} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxR6bTKhfB_ugJHmzMMe_NJU3PWy-4K3T5Hw&usqp=CAU" alt="" />
-        <img onClick={()=>setStack("Apple")}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7To-FmTYPtCGTsHdr6FHTDMB7VO3LZ1Dr0g&usqp=CAU" alt="" />
-        <img onClick={()=>setStack("PlayStore")}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR4IPUzioXw5_IX3vROuWQwqHeePJ0_qFYWg&usqp=CAU" alt="" />
+        <img onClick={()=>setStack("React")} src={react} alt="react.png" />
+        <img onClick={()=>setStack("Github")} src={github} alt="github.png" />
+        <img onClick={()=>setStack("Apple")}  src={apple} alt="apple.png" />
+        <img onClick={()=>setStack("PlayStore")}  src={playstore} alt="play.png" />
       </div>
       <br />
       <button className="submit" onClick={submit}>SUBMIT</button>
