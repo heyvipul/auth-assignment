@@ -1,5 +1,6 @@
 body{
   font-family: sans-serif;
+  margin: 0;
 }
 #navbar{
     display: flex;
@@ -41,10 +42,6 @@ body{
     cursor: pointer;
     font-weight: bold;
   }
-  h2,h3{
-    text-decoration: underline;
-    text-align: center;
-  }
   .btn{
     text-align: center;
     align-items: center;
@@ -54,4 +51,73 @@ body{
     font-size: 18px;
     border-radius: 4px;
     padding: 10px;
+  }
+  .main_div{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  h2{
+    text-align: center;
+  }
+  .main_div  h2{
+    background-color: rgb(188,188,188);
+    padding: 15px;
+    word-spacing: 10px;
+    text-align: center;
+  }
+  .name{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+    width: 38%;
+    margin: auto;
+    border-radius: 20px;
+    background-color: rgb(246,234,234);
+    text-align: left;
+    padding: 10px;
+  }
+  .input,span{
+    border: none;
+    background-color: rgb(246,234,234);
+    font-size: 18px;
+    width: 100px;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .name p {
+    margin-left: 20px;
+    font-size: 18px;
+  }
+  .second_div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 38%;
+    margin: auto;
+    padding-left: 4rem;
+  }
+  .second_div img{
+    width: 14rem;
+    height: 13rem;
+    border: 2px solid rgb(107, 230, 107);
+    margin-top: 10px;
+    border-radius: 20px; 
+    transition: transform .2s;
+  }
+  .second_div img:hover{
+    cursor: pointer;
+    transform: scale(1.08);
+    border: 2px solid red;
+  }
+  .submit{
+    background-color: rgb(216,216,217);
+    border: none;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .test_sucess{
+    text-align: center;
   }

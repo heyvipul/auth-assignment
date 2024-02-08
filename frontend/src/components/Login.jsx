@@ -5,10 +5,10 @@ import axios from "axios"
 
 
 const Login = () => {
-    const[email,setEmail] = useState("")
-    const[password,setPassword] = useState("");
+    const[email,setEmail] = useState("john@gmail.com")
+    const[password,setPassword] = useState("john123");
     const navigate = useNavigate()
-    const TokenData = JSON.parse(localStorage.getItem("token")) || null
+    const TokenData = JSON.parse(localStorage.getItem("token")) || null  ;
     // console.log(TokenData);
 
     async function loginFun(e){
@@ -24,8 +24,8 @@ const Login = () => {
         localStorage.setItem("token",JSON.stringify(data.token))
 
         if(data.msg === "Login successfull!"){
-          alert("Login Successfull!")
-          navigate("/")
+          alert("Login successfull!")
+          return navigate("/")
         }
         else if(data.msg === "User not exist!"){
           alert("User not exist!")
@@ -37,6 +37,7 @@ const Login = () => {
          
       } catch (error) {
         console.log(error);
+        alert("something went wrong!")
       }
     }
 
@@ -46,7 +47,7 @@ const Login = () => {
       navigate("/")
     }  
 
-  if(TokenData != null){
+  if(TokenData != null || TokenData != undefined){
     return <div className='btn'>
       <button className='btnn' onClick={logout}>Logout</button>
     </div>

@@ -2,17 +2,17 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  useEffect(() => {
-    const tokenData = JSON.parse(localStorage.getItem("token")) || null;
-    setIsLoggedIn(tokenData !== null);
-  }, [isLoggedIn]);
+  // useEffect(() => {
+  //   const tokenData = JSON.parse(localStorage.getItem("token")) || null || undefined
+  //   setIsLoggedIn(tokenData !== null);
+  // }, [isLoggedIn]);
 
   const links = [
     { path: "/", title: "Home" },
     { path: "/signup", title: "Signup" },
-    { path: "/login", title: isLoggedIn ? "Logout" : "Login" }
+    { path: "/login", title: "Login" }
   ];
 
   return (
